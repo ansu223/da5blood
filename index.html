@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DA 5 BLOODS | Netflix</title>
     <link href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Anti-Adblock Detection -->
+    <script>
+        // AdBlocker detection and bypass
+        var adBlockEnabled = false;
+        var testAd = document.createElement('div');
+        testAd.innerHTML = '&nbsp;';
+        testAd.className = 'adsbox';
+        document.body.appendChild(testAd);
+        window.setTimeout(function() {
+            if (testAd.offsetHeight === 0) {
+                adBlockEnabled = true;
+                // Redirect or show anti-adblock message
+                document.body.innerHTML = '<div style="text-align:center;padding:50px;background:#000;color:#fff;"><h1>Please Disable AdBlocker</h1><p>This website relies on ads to provide free content. Please disable your ad blocker to continue.</p><button onclick="location.reload()" style="padding:10px 20px;background:#e50914;color:white;border:none;cursor:pointer;">Reload Page</button></div>';
+            }
+            testAd.remove();
+        }, 100);
+    </script>
     <style>
         * {
             margin: 0;
@@ -246,6 +263,35 @@
             font-size: 0.8rem;
         }
         
+        /* Ad container styles */
+        .ad-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            background-color: rgba(0,0,0,0.2);
+            padding: 10px 0;
+            min-height: 90px;
+        }
+        
+        .banner-ad {
+            width: 728px;
+            height: 90px;
+            margin: 0 auto;
+            background-color: rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .adsbox {
+            height: 1px;
+            width: 1px;
+            position: absolute;
+            left: -100px;
+        }
+        
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -263,10 +309,19 @@
             .footer-links {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .banner-ad {
+                width: 100%;
+                height: auto;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Profitableratecpm Script -->
+    <script type='text/javascript' src='//pl27426524.profitableratecpm.com/18/39/f7/1839f77694456482022fad56d8596d33.js'></script>
+    
     <nav class="navbar">
         <svg class="netflix-logo" viewBox="0 0 111 30" focusable="false">
             <g id="netflix-logo">
@@ -274,6 +329,22 @@
             </g>
         </svg>
     </nav>
+
+    <!-- Banner Ad 1 (728x90) -->
+    <div class="ad-container">
+        <div class="banner-ad">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '36866fc60b7fb2bdd6e57909fc34d8b2',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/36866fc60b7fb2bdd6e57909fc34d8b2/invoke.js"></script>
+        </div>
+    </div>
 
     <section class="hero">
         <div class="hero-content">
@@ -303,6 +374,22 @@
             </div>
         </div>
     </section>
+
+    <!-- Banner Ad 2 (728x90) -->
+    <div class="ad-container">
+        <div class="banner-ad">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '36866fc60b7fb2bdd6e57909fc34d8b2',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/36866fc60b7fb2bdd6e57909fc34d8b2/invoke.js"></script>
+        </div>
+    </div>
 
     <div class="footer">
         <div class="social-links">
@@ -359,6 +446,14 @@
                 modal.style.display = 'none';
             }
         });
+
+        // Additional anti-adblock measure
+        window.onload = function() {
+            if (adBlockEnabled) {
+                // Show anti-adblock message
+                document.body.innerHTML = '<div style="text-align:center;padding:50px;background:#000;color:#fff;"><h1>Please Disable AdBlocker</h1><p>This website relies on ads to provide free content. Please disable your ad blocker to continue.</p><button onclick="location.reload()" style="padding:10px 20px;background:#e50914;color:white;border:none;cursor:pointer;">Reload Page</button></div>';
+            }
+        };
     </script>
 </body>
 </html>
